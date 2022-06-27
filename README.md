@@ -1,7 +1,6 @@
-# JAX-WS SOAP Web Service Client With Java 11 and Maven 
+# JakartaEE JAX-WS SOAP Web Service Client With Java 11 and Maven 
 
-This project demonstrates how to generate a JAX-WS client with Java 11 and Maven 3. It does this using the Eclipse Metro
-JAX-WS Maven plugin to generate web service artifacts that target the JAX-WS reference implementation.
+This project demonstrates how to generate a JakartaEE JAX-WS client with Java 11 and Maven 3. 
 
 See this [post](https://sorenpoulsen.com/jax-ws-soap-web-service-client-for-java-11-with-maven) for a full explanation 
 on how it works.
