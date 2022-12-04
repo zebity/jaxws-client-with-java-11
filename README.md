@@ -1,9 +1,19 @@
-# JakartaEE JAX-WS SOAP Web Service Client With Java 11 and Maven 
+# JakartaEE JAX-WS & Apache CXF SOAP Web Service Client With Java 11 and Maven 
 
-This project demonstrates how to generate a JakartaEE JAX-WS client with Java 11 and Maven 3. 
+This project demonstrates how to generaton either:
+ - a JakartaEE JAX-WS Java client (using wsimport)
+ - using Apache CXF (using wsdl2java). 
+ - in both cases this was done with Java 11 and Maven 3 or
 
-See this [post](https://sorenpoulsen.com/jax-ws-soap-web-service-client-for-java-11-with-maven) for a full explanation 
-on how it works.
+This was to get an ONVIF client application that will talk with ONVIF compatible devices
+
+See this [post](https://tips.graphica.com.au/onvif-ws-client-consumption/)
+
+I used the article to help with the initial very simple starting point: [post](https://sorenpoulsen.com/jax-ws-soap-web-service-client-for-java-11-with-maven)
+
+It boils the Maven / JavaEE and Jakarta EE down to its the most basic case. Then expanded from there...
+
+The much longer directory structure reflects ONVIF wsdl one ...
 
 ## Requirements
 
@@ -16,4 +26,3 @@ on how it works.
 
 ## Source
 
-The sourcecode is available from [GitHub](https://github.com/SorenPoulsen/jaxws-client-with-java-11)
