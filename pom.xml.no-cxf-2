@@ -17,6 +17,38 @@
 
  <dependencies>
   <dependency>
+   <groupId>javax.xml.bind</groupId>
+   <artifactId>jaxb-api</artifactId>
+   <version>2.3.1</version>
+  </dependency>
+  <dependency>
+   <groupId>com.sun.xml.bind</groupId>
+   <artifactId>jaxb-core</artifactId>
+   <version>4.0.1</version>
+  </dependency>
+  <dependency>
+   <groupId>com.sun.xml.bind</groupId>
+   <artifactId>jaxb-impl</artifactId>
+   <version>4.0.1</version>
+  </dependency>
+    
+  <dependency>
+   <groupId>org.apache.cxf</groupId>
+   <artifactId>cxf-rt-frontend-jaxws</artifactId>
+   <version>3.5.4</version>
+  </dependency>
+  <dependency>
+   <groupId>org.apache.cxf</groupId>
+   <artifactId>cxf-rt-transports-http</artifactId>
+   <version>3.5.4</version>
+  </dependency>
+  <dependency>
+   <groupId>com.sun.xml.bind</groupId>
+   <artifactId>jaxb-xjc</artifactId>
+   <version>4.0.1</version>
+  </dependency>
+  	
+  <dependency>
    <groupId>jakarta.xml.ws</groupId>
    <artifactId>jakarta.xml.ws-api</artifactId>
    <version>3.0.1</version>
@@ -26,6 +58,28 @@
    <artifactId>jaxws-rt</artifactId>
    <version>3.0.2</version>
    <scope>runtime</scope>
+  </dependency>
+  <dependency>
+   <groupId>com.sun.xml.messaging.saaj</groupId>
+   <artifactId>saaj-impl</artifactId>
+   <version>3.0.0</version>
+   <scope>runtime</scope>
+  </dependency>
+
+  <dependency>
+   <groupId>jakarta.xml.bind</groupId>
+   <artifactId>jakarta.xml.bind-api</artifactId>
+   <version>3.0.1</version>
+  </dependency>
+  <dependency>
+   <groupId>jakarta.jws</groupId>
+   <artifactId>jakarta.jws-api</artifactId>
+   <version>3.0.0</version>
+  </dependency>
+  <dependency>
+   <groupId>jakarta.xml.soap</groupId>
+   <artifactId>jakarta.xml.soap-api</artifactId>
+   <version>3.0.0</version>
   </dependency>
 
   <dependency>
@@ -66,7 +120,7 @@
    <plugin>
     <groupId>org.codehaus.mojo</groupId>
     <artifactId>build-helper-maven-plugin</artifactId>
-    <version>1.7</version>
+    <version>3.3.0</version>
     <executions>
      <execution>
       <id>add-source</id>
@@ -93,7 +147,7 @@
    </plugin>
 
    <plugin>
-    <!-- The Eclipse Metro JAX-WS Maven plugin is configured to run the 'wsimport' goal as part of the
+    <!-- The Jakarta / Eclipse JAX-WS Maven plugin is configured to run the 'wsimport' goal as part of the
          build. You do not have to install the wsimport commandline tool. The plugin uses wsimport through
          its own jaxws-tools.jar dependency. -->
     <groupId>com.sun.xml.ws</groupId>
