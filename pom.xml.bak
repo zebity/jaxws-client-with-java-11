@@ -17,34 +17,6 @@
 
  <dependencies>
   <dependency>
-   <groupId>javax.xml.bind</groupId>
-   <artifactId>jaxb-api</artifactId>
-   <version>2.3.0</version>
-  </dependency>
-  <dependency>
-   <groupId>com.sun.xml.bind</groupId>
-   <artifactId>jaxb-core</artifactId>
-   <version>3.0.2</version>
-  </dependency>
-    
-  <dependency>
-   <groupId>com.sun.xml.bind</groupId>
-   <artifactId>jaxb-impl</artifactId>
-   <version>3.0.2</version>
-  </dependency>
-    
-  <dependency>
-   <groupId>org.apache.cxf</groupId>
-   <artifactId>cxf-rt-frontend-jaxws</artifactId>
-   <version>3.5.4</version>
-  </dependency>
-  <dependency>
-   <groupId>org.apache.cxf</groupId>
-   <artifactId>cxf-rt-transports-http</artifactId>
-   <version>3.5.4</version>
-  </dependency>
-  	
-  <dependency>
    <groupId>jakarta.xml.ws</groupId>
    <artifactId>jakarta.xml.ws-api</artifactId>
    <version>3.0.1</version>
@@ -54,28 +26,6 @@
    <artifactId>jaxws-rt</artifactId>
    <version>3.0.2</version>
    <scope>runtime</scope>
-  </dependency>
-  <dependency>
-   <groupId>com.sun.xml.messaging.saaj</groupId>
-   <artifactId>saaj-impl</artifactId>
-   <version>3.0.0</version>
-   <scope>runtime</scope>
-  </dependency>
-
-  <dependency>
-   <groupId>jakarta.xml.bind</groupId>
-   <artifactId>jakarta.xml.bind-api</artifactId>
-   <version>3.0.1</version>
-  </dependency>
-  <dependency>
-   <groupId>jakarta.jws</groupId>
-   <artifactId>jakarta.jws-api</artifactId>
-   <version>3.0.0</version>
-  </dependency>
-  <dependency>
-   <groupId>jakarta.xml.soap</groupId>
-   <artifactId>jakarta.xml.soap-api</artifactId>
-   <version>3.0.0</version>
   </dependency>
 
   <dependency>
@@ -101,8 +51,8 @@
        <sourceRoot>${project.build.directory}/generated-sources/cxf/java</sourceRoot>
        <wsdlOptions>
         <wsdlOption>
-         <wsdl>${basedir}/src/main/wsdl/onvif/ver10/device/wsdl/devicemgmt.wsdl</wsdl>
-         <!-- wsdl>${basedir}/src/main/wsdl/onvif/onvif_device/client/devicemgmt_services3.wsdl</wsdl -->
+         <!-- wsdl>${basedir}/src/main/wsdl/onvif/ver10/device/wsdl/devicemgmt.wsdl</wsdl -->
+         <wsdl>${basedir}/src/main/wsdl/onvif/ver10/device/wsdl/test.wsdl</wsdl>
         </wsdlOption>
        </wsdlOptions>
       </configuration>
@@ -116,7 +66,7 @@
    <plugin>
     <groupId>org.codehaus.mojo</groupId>
     <artifactId>build-helper-maven-plugin</artifactId>
-    <version>1.7</version>
+    <version>3.0.0</version>
     <executions>
      <execution>
       <id>add-source</id>
@@ -143,7 +93,7 @@
    </plugin>
 
    <plugin>
-    <!-- The Jakarta / Eclipse JAX-WS Maven plugin is configured to run the 'wsimport' goal as part of the
+    <!-- The Eclipse Metro JAX-WS Maven plugin is configured to run the 'wsimport' goal as part of the
          build. You do not have to install the wsimport commandline tool. The plugin uses wsimport through
          its own jaxws-tools.jar dependency. -->
     <groupId>com.sun.xml.ws</groupId>
@@ -160,13 +110,12 @@
 
      <!-- wsimport will process the WSDL files under this folder at build time. -->
      <wsdlDirectory>${project.basedir}/src/main/wsdl/onvif/ver10/device/wsdl/</wsdlDirectory>
-     <!-- wsdlDirectory>${project.basedir}/src/main/wsdl/onvif/onvif_device/client/</wsdlDirectory -->
 
      <!-- The generated Service class will load the WSDL at runtime from the root of the classpath
           /test.wsdl rather than the default which is to use the http endpoint from the WSDL files
          Service element. -->
-     <wsdlLocation>devicemgmt.wsdl</wsdlLocation>
-     <!-- wsdlLocation>devicemgt_services3.wsdl</wsdlLocation -->
+     <!-- wsdlLocation>devicemgmt.wsdl</wsdlLocation -->
+     <wsdlLocation>test.wsdl</wsdlLocation>
      <!-- The extension property tells JAX-WS to support soap v1.2 bindings. -->
      <extension>true</extension>
     </configuration>

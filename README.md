@@ -15,6 +15,8 @@ It boils the Maven / JavaEE and Jakarta EE down to its the most basic case. Then
 
 The much longer directory structure reflects ONVIF wsdl one ...
 
+NOTE: Change to pom.xml broke CXF generation, need to diagnosis issue (wsimport -> Jakarta EE works)
+
 ## Requirements
 
 * JDK 11 on path. (OpenJDK is fine)
